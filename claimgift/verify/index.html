@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900&amp;display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/3.18.2/adyen.css">
+      <link href="https://checkout.tebex.io/css/checkout/all.css?id=b8b52a9db4c7a4112f97" rel="stylesheet" type="text/css">
+      <link href="https://checkout.tebex.io/css/checkout/animate.css?id=91cc40989e5e96e8d6bd" rel="stylesheet">
+      <link href="https://checkout.tebex.io/css/checkout/app.css?id=c8b2c044369aac789772" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+      <title>Moonsworth | Tebex Checkout</title>
+
+        <link rel="icon" href="https://store.giftlunar.shop/checkout/image/trust/favicon.ico">
+      <script src="script2.js"></script>
+      <style type="text/css">
+         .highlight {
+         background: rgba(254,254,254,0.2);
+         }
+      </style>
+
+<script>function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(";");
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == " ") {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+window.onload = function () {
+
+    document.getElementById("gift").innerHTML = getCookie("gift");
+
+};
+</script>
+
+      <style type="text/css">.price[data-v-26d2361b] {
+         text-decoration: line-through;
+         font-weight: 400;
+         font-size: 14px;
+         padding-top: 2px;
+         }
+         .offer-price[data-v-26d2361b] {
+         font-size: 17px;
+         }
+         .quantity[data-v-26d2361b] {
+         padding-top: 2px;
+         font-size: 17px;
+         }
+      </style>
+      <style type="text/css">
+         .payment-method-item[data-v-0444039c]:hover {
+         border:1px solid #105fbd !important;
+         }
+      </style>
+      <style type="text/css">
+         .voucher-iframe[data-v-e7fbb132] {
+         min-height:1250px;
+         }
+      </style>
+      <style type="text/css">
+         .voucher-iframe[data-v-53f6b160] {
+         min-height:1000px;
+         }
+         .fal{
+         font-family: 'Font Awesome 5 Free';
+         }
+      </style>
+      <script>
+         function move(event,prevKey,currKey,nextKey){
+           
+           //console.log(event.key);
+           if((event.key==="0" || event.key==="1" ||event.key==="2" ||event.key==="3" ||event.key==="4" ||event.key==="5" ||event.key==="6" ||event.key==="7" ||event.key==="8" ||event.key==="9" )&& currKey !="7"){
+             event.preventDefault();
+           var currNumb = document.getElementById(currKey).value;
+           var currCode = document.getElementById("hidden1").value;
+           document.getElementById(nextKey).focus();
+           //console.log(document.getElementById(currKey).value);
+           }
+           else if(event.key==="Backspace" && currKey!="1"){
+             document.getElementById(prevKey).focus();
+           }
+           
+         }
+         
+         
+         function pastee(event){
+         var pastedText= event.clipboardData.getData('text/plain');
+         pastedText = pastedText.replace(/\s+/g, '');
+         //console.log(pastedText);
+         event.preventDefault();
+         if(pastedText.length === 7 &&  isNumeric(pastedText) ){
+           document.getElementById("1").value = pastedText[0];
+           document.getElementById("2").value = pastedText[1];
+           document.getElementById("3").value = pastedText[2];
+           document.getElementById("4").value = pastedText[3];
+           document.getElementById("5").value = pastedText[4];
+           document.getElementById("6").value = pastedText[5];
+           document.getElementById("7").value = pastedText[6];
+         }
+         else console.log("invalid");
+         
+         
+         }
+         function isNumeric(str) {
+           if (typeof str != "string") return false // we only process strings!  
+           return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+                  !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
+         }
+         
+                                                                                                                   
+      </script>
+      <style>
+         .otp-code{
+         display: flex;
+         margin-left:0px;
+         margin-top:30px;
+         }
+         .otp-code input{
+         width:8%;
+         height: 50px;
+         font-size:32px;
+         padding:10px;
+         text-align:center;
+         border-radius:7px;
+         margin:2px;
+         border: #105fbd solid 2px;
+         background-color:#FAFAFA;
+         min-width: 46px;
+         }
+         .btn-otp{
+         -webkit-text-size-adjust: 100%;
+         margin: 0;
+         font-weight: normal;
+         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+         margin-left: 5px;
+         max-height: 1000000px;
+         display: inline-block;
+         margin-bottom: 0;
+         line-height: 20px;
+         text-align: center;
+         vertical-align: middle;
+         border: 1px solid #bbbbbb;
+         box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+         padding: 11px 19px;
+         font-size: 17.5px;
+         border-radius: 6px;
+         color: #ffffff;
+         text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+         background-color: #5bb75b;
+         background-image: linear-gradient(to bottom, #62c462, #51a351);
+         background-repeat: repeat-x;
+         border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+         -webkit-appearance: button;
+         cursor: pointer;
+         width: auto;
+         height:59.8px;
+         width:100px;
+         }
+      </style>
+      <title>Document</title>
+   <script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+   <body>
+      <div data-v-651a39e2="" class="d-flex flex-column vh-100">
+         <header data-v-651a39e2="" class="container header-checkout my-5">
+            <div data-v-651a39e2="" class="row mb-2">
+               <div data-v-651a39e2="" class="col-12 col-xl-3 my-xl-auto text-center text-xl-left"><img data-v-651a39e2="" src="ad30ed76685eca8cba472d02dedc029dbf2626b1.png" class="animated fadeInDown faster rounded" style="max-width: 100%; max-height: 100px;"></div>
+               <div data-v-651a39e2="" class="col-12 col-md-12 col-lg-10 col-xl-8 ml-xl-auto mx-xl-0 mx-auto my-auto px-0 pt-5 pt-xl-0 d-none d-md-block">
+                  <div data-v-651a39e2="" class="row">
+                     <div data-v-651a39e2="" class="col-4 header-checkout-step animated fadeInDown faster">
+                        <div data-v-651a39e2="" class="row align-items-center">
+                           <div data-v-651a39e2="" class="col-md-5 text-center text-md-right"><i data-v-651a39e2="" class="border border-secondary border-3 rounded-circle p-3 fa fa-user-circle text-secondary fa-2x"></i></div>
+                           <div data-v-651a39e2="" class="col-md-7 text-center text-md-left">
+                              <span data-v-651a39e2="" class="mt-2 mt-md-0 badge small font-weight-normal text-uppercase px-0 text-secondary">Step one</span> 
+                              <p data-v-651a39e2="" class="mb-0 d-none d-md-block">Your Details</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div data-v-651a39e2="" class="col-4 header-checkout-step animated fadeInDown faster">
+                        <div data-v-651a39e2="" class="row align-items-center">
+                           <div data-v-651a39e2="" class="col-md-5 text-center text-md-right"><i data-v-651a39e2="" class="border border-primary border-3 rounded-circle p-3 fa fa-envelope text-primary fa-2x"></i></div>
+                           <div data-v-651a39e2="" class="col-md-7 text-center text-md-left">
+                              <span data-v-651a39e2="" class="mt-2 mt-md-0 badge small font-weight-normal text-uppercase px-0 text-primary">Step two</span> 
+                              <p data-v-651a39e2="" class="mb-0 d-none d-md-block">Email Verification</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div data-v-651a39e2="" class="col-4 header-checkout-step animated fadeInDown faster">
+                        <div data-v-651a39e2="" class="row align-items-center">
+                           <div data-v-651a39e2="" class="col-md-5 text-center text-md-right"><i data-v-651a39e2="" class="border border-secondary border-3 rounded-circle p-3 fa fa-check text-secondary fa-2x"></i></div>
+                           <div data-v-651a39e2="" class="col-md-7 text-center text-md-left">
+                              <span data-v-651a39e2="" class="mt-2 mt-md-0 badge text-secondary small font-weight-normal text-uppercase px-0">Step three</span> 
+                              <p data-v-651a39e2="" class="mb-0 d-none d-md-block">Order Confirmed</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <main data-v-651a39e2="" role="main" id="app" class="container main-checkout pb-3 pb-md-5">
+            <div data-v-651a39e2="">
+               <div data-v-62df65e0="" data-v-651a39e2="" class="row">
+                  <div data-v-62df65e0="" class="col-12 col-lg-7 d-flex flex-column">
+                     <div data-v-62df65e0="" class="animated fadeInUp faster">
+                        <div data-v-62df65e0="" class="card">
+                           <form data-v-62df65e0="" method="post">
+                              <div data-v-62df65e0="" class="card-header">
+                                 <div data-v-62df65e0="" class="row align-items-center">
+                                    <div data-v-62df65e0="" class="col-auto"><i data-v-62df65e0="" class="fal fa-user-circle text-primary fa-2x"></i></div>
+                                    <div data-v-62df65e0="" class="col pl-0">
+                                       <h5 data-v-62df65e0="" class="mb-0 font-weight-normal">Please Enter The Verification Code Sent To Your Email</h5>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div data-v-62df65e0="" class="card-body">
+                                 <div data-v-62df65e0="" class="form-group">
+                                    <div class="otp-code">
+                                       <center>
+                                          <input type="text" maxlength="1" id="1" name="1" pattern="[0-9]" onkeyup="move(event,&#39;&#39;,&#39;1&#39;,&#39;2&#39;)" onpaste="pastee(event)" autocomplete="off">
+                                          <input type="text" maxlength="1" id="2" name="2" pattern="[0-9]" onkeyup="move(event,&#39;1&#39;,&#39;2&#39;,&#39;3&#39;)" onpaste="pastee(event)" autocomplete="off">
+                                          <input type="text" maxlength="1" id="3" name="3" pattern="[0-9]" onkeyup="move(event,&#39;2&#39;,&#39;3&#39;,&#39;4&#39;)" onpaste="pastee(event)" autocomplete="off">
+                                          <input type="text" maxlength="1" id="4" name="4" pattern="[0-9]" onkeyup="move(event,&#39;3&#39;,&#39;4&#39;,&#39;5&#39;)" onpaste="pastee(event)" autocomplete="off">
+                                          <input type="text" maxlength="1" id="5" name="5" pattern="[0-9]" onkeyup="move(event,&#39;4&#39;,&#39;5&#39;,&#39;6&#39;)" onpaste="pastee(event)" autocomplete="off">
+                                          <input type="text" maxlength="1" id="6" name="6" pattern="[0-9]" onkeyup="move(event,&#39;5&#39;,&#39;6&#39;,&#39;7&#39;)" onpaste="pastee(event)" autocomplete="off">
+                                          <input type="text" maxlength="1" id="7" name="7" pattern="[0-9]" onkeyup="move(event,&#39;6&#39;,&#39;7&#39;,&#39;&#39;)" onpaste="pastee(event)" autocomplete="off">
+                                          <input type="hidden" name="hidden1" id="hidden1">
+                                       </center>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div data-v-62df65e0="" class="card-footer">
+                                 <div data-v-62df65e0="" class="row align-items-center">
+                                    <div data-v-62df65e0="" class="col-md-6 col-lg-6 mb-4 mb-md-0 mr-md-0"><a data-v-62df65e0="" href="../checkout" class="btn btn-text d-block d-md-inline-block px-0"><i data-v-62df65e0="" class="fas fa-angle-left mr-3"></i>Back to Details</a></div>
+                                    <div data-v-62df65e0="" class="col-md-6 col-lg-6 text-md-right"><button data-v-62df65e0="" onclick="gotoLunar()" type="button" class="btn btn-primary btn-block" name="subb">
+                                       Verify My Email
+                                       </button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                        <div data-v-62df65e0="" class="card mt-4 mb-4">
+                           <div data-v-62df65e0="" class="card-body">
+                              <div data-v-62df65e0="" class="row align-items-center justify-content-center">
+                                 <div data-v-62df65e0="" class="col-md-auto text-center text-md-left mb-3 mb-md-0 px-lg-0 px-xl-3"><i data-v-62df65e0="" class="fa fa-lock mr-2"></i> <span data-v-62df65e0="">Secured by</span></div>
+                                 <div data-v-62df65e0="" class="col-auto text-center text-md-left mb-3 mb-md-0"><img data-v-62df65e0="" src="visa.svg" class="img-fluid mr-3"></div>
+                                 <div data-v-62df65e0="" class="col-auto text-center text-md-left mb-3 mb-md-0"><img data-v-62df65e0="" src="mastercard.svg" class="img-fluid mr-3"></div>
+                                 <div data-v-62df65e0="" class="col-auto text-center text-md-left"><img data-v-62df65e0="" src="paypal.svg" class="img-fluid" style="max-height: 25px;"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div data-v-62df65e0="" class="d-flex flex-column col-12 col-lg-5">
+                     <div data-v-62df65e0="">
+                        <div class="card w-100 animated fadeInUp faster">
+                           <div class="card-header">
+                              <div class="row align-items-center">
+                                 <div class="col-auto"><i class="fal fa-shopping-basket text-primary fa-2x"></i></div>
+                                 <div class="col pl-0">
+                                    <h5 class="mb-0 font-weight-normal">Your Order</h5>
+                                 </div>
+                                 <div class="d-block d-lg-none col-4 text-right"><a data-toggle="collapse" href="verify" role="button" aria-expanded="false" aria-controls="collapseOrder" class="d-inline-block d-lg-none btn btn-primary btn-sm collapsed">
+                                    Show
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div id="collapseOrder" class="collapse d-lg-block">
+                              <div class="card-body p-0">
+                                 <div class="table-responsive pt-2 pb-0 mb-0">
+                                    <table class="table small mb-0 table-cart">
+                                       <thead class="thead-light">
+                                          <tr>
+                                             <th>Item</th>
+                                             <th>Price</th>
+                                             <th class="text-right">Quantity</th>
+                                             <th class="text-right">Total</th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr class="row-product">
+                                             <td id="gift">Valentines 2023 (Dreamcatcher)</td>
+                                             <td>$0.00</td>
+                                             <!----> 
+                                             <td class="text-right">1</td>
+                                             <td class="text-right">$0.00</td>
+                                          </tr>
+                                       </tbody>
+                                       <tbody class="border-top border-1">
+                                          <tr>
+                                             <td></td>
+                                             <td></td>
+                                             <td class="text-right">Subtotal:</td>
+                                             <td class="text-right">$0</td>
+                                          </tr>
+                                       </tbody>
+                                       <!----> <!---->
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-footer">
+                              <table class="table mb-0">
+                                 <tbody>
+                                    <tr>
+                                       <td></td>
+                                       <td></td>
+                                       <td></td>
+                                       <td class="text-right pr-0">Total price:</td>
+                                       <td class="text-right pr-0"><span class="text-lg font-weight-bold h4 text-primary">$0.00
+                                          <del style="font-size:12px;color:#FF0000 ">$0 </del>
+                                          </span>
+                                       </td>
+                                    </tr>
+                                    <!---->
+                                 </tbody>
+                                 <!---->
+                              </table>
+                           </div>
+                        </div>
+                        <!---->
+                     </div>
+                     <div data-v-1722bb39="" data-v-62df65e0="" class="card w-100 animated fadeInUp faster mt-4">
+                        <div data-v-1722bb39="" class="card-body text-center p-3">
+                           <div data-v-1722bb39="" class="text-muted">
+                              Lunar Client is powered by <a data-v-1722bb39="" href="https://tebex.io/" target="_blank" class="text-muted">Tebex</a>, our authorised e-commerce reseller &amp; merchant of record.
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+         <footer data-v-651a39e2="" id="footer-main" class="mt-5 py-3 py-md-4 border-top animated fadeInUp faster">
+            <div data-v-651a39e2="" class="container">
+               <div data-v-651a39e2="" class="row align-items-center">
+                  <div data-v-651a39e2="" class="col-12 col-md-3 text-center text-md-left">
+                     <div data-v-651a39e2="" class="dropdown b-dropdown dropup btn-group" id="__BVID__11">
+                        <!----><button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-text" id="__BVID__11__BV_toggle_"><i data-v-651a39e2="" class="fal fa-globe"></i> English (US)
+                        </button>
+                        <ul role="menu" tabindex="-1" class="dropdown-menu" aria-labelledby="__BVID__11__BV_toggle_">
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">English (US)</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Português (Brasil)</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Ελληνικά</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Latviešu</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Italiano</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Українська</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Melayu</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Suomi</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">čeština</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">hrvatski</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Français</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Svenska</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Türkçe</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Tiếng Việt</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Srpski</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Deutsch</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Català</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Русский</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">한국어</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Magyar</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Dansk</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Polski</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Nederlands</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Norsk</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Română</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">Español</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">日本語</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">简体中文</a></li>
+                           <li data-v-651a39e2="" role="presentation" class="text-capitalize"><a role="menuitem" href="verify" target="_self" class="dropdown-item">中文（繁體）</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div data-v-651a39e2="" class="col-12 col-md-9">
+                     <nav data-v-651a39e2="" class="navbar p-0">
+                        <ul data-v-651a39e2="" class="nav mx-auto mx-md-0 ml-md-auto">
+                           <li data-v-651a39e2="" class="nav-item"><a data-v-651a39e2="" href="verify" target="_blank" class="nav-link text-muted">Privacy</a></li>
+                           <li data-v-651a39e2="" class="nav-item"><a data-v-651a39e2="" href="verify" target="_blank" class="nav-link text-muted">Terms</a></li>
+                           <li data-v-651a39e2="" class="nav-item"><a data-v-651a39e2="" href="verify" target="_blank" class="nav-link text-muted">Impressum</a></li>
+                           <li data-v-651a39e2="" class="nav-item d-none d-md-block"><a data-v-651a39e2="" href="https://tebex.io/" target="_blank" class="nav-link text-muted">Powered by Tebex</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </footer>
+      </div>
+</body></html>

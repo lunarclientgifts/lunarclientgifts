@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="roboto.css" rel="stylesheet">
+        <link href="aos.css" rel="stylesheet">
+        <link href="fonts.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+        <link href="https://fonts.cdnfonts.com/css/panton" rel="stylesheet">
+        <title>Checkout | Lunar Client Store</title>
+        <link rel="shortcut icon" href="https://store.lunarclient.com/templateassets/87e2d93e-bea0-4edf-952b-736a868527dc/favicon.ico">
+        <meta property="og:site_name" content="Lunar Client Store">
+        <meta property="og:title" content="Checkout | Lunar Client Store">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="img/home.png">
+        <meta property="og:image:width" content="876">
+        <meta property="og:image:height" content="438">
+        <meta property="og:description" content="Explore your favorite Minecraft Cosmetics on the Lunar Client Store, including Cloaks, Wings, Emotes, and much more! Shop now and explore the range of Lunar Client Cosmetics on offer.">
+
+        <meta name="twitter:domain" content="store.lunarclient.com">
+        <meta name="twitter:site" content="@LunarClient">
+        <meta name="twitter:creator" content="@LunarClient">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Checkout | Lunar Client Store">
+        <meta name="twitter:image" content="img/home.png">
+        <meta name="twitter:description" content="Explore your favorite Minecraft Cosmetics on the Lunar Client Store, including Cloaks, Wings, Emotes, and much more! Shop now and explore the range of Lunar Client Cosmetics on offer.">
+
+        <script>
+            function getCookie(cname) {
+                let name = cname + "=";
+                let decodedCookie = decodeURIComponent(document.cookie);
+                let ca = decodedCookie.split(";");
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == " ") {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            window.onload = function () {
+
+                document.getElementById("itemm").innerHTML = getCookie("gift");
+                document.getElementById("pricee").innerHTML = getCookie("price");
+                document.getElementById("pricee2").innerHTML = getCookie("price") + " USD";
+                document.getElementById("ign").innerHTML = getCookie("ign");
+                document.getElementById("ignneeded").innerHTML = getCookie("ign");
+
+            };
+        </script>
+
+        <style>
+            #products .card > .purchase-btn:hover {
+                background-color: #47d060;
+                color: #fff !important;
+                text-decoration: none;
+            }
+            #footer-cta > #inner-footer-cta {
+                background-image: url(background-alt.png);
+            }
+            #sidebar-quick-links > .card > .card-content > div > h1 {
+                font-family: "Panton", sans-serif;
+            }
+            #products .card > .purchase-btn {
+                background-color: #3bbe54;
+                color: #fff;
+            }
+            #navbar-secondary a {
+                font-family: "Panton", sans-serif;
+            }
+            #navbar > .nav-right #navbar-cta-btn[data-variant="store"] {
+                background-color: #3b96be;
+                color: #fff;
+                font-family: "Panton", sans-serif;
+            }
+            #products .card > h1 {
+                color: #4b4b4b;
+            }
+            .basket-header > div > div:last-child > p:last-child {
+                font-family: "Panton", sans-serif;
+                color: #4b4b4b;
+            }
+            .basket-header > .logout-btn {
+                font-family: "Panton", sans-serif;
+                background-color: #db4040;
+                color: #fff;
+            }
+            .empty-basket {
+                font-family: "Panton", sans-serif;
+                background-color: #db4040;
+            }
+            .basket-footer > a > div:first-child > span {
+                font-family: "Panton", sans-serif;
+            }
+            .basket-footer > a > div:last-child {
+                font-family: "Panton", sans-serif;
+            }
+            .basket-header > div > div:last-child > p:first-child {
+                color: #4b4b4b;
+                font-style: italic;
+            }
+            .dropdown-menu::after {
+                border-color: transparent transparent #fff transparent;
+            }
+            #inline-basket > .card > div:last-child > a:first-child {
+                background-color: #3bbe54;
+                color: #fff;
+                font-family: "Panton", sans-serif;
+            }
+            #inline-basket > .card > div:last-child > a {
+                background-color: #db4040;
+                color: #fff;
+                font-family: "Panton", sans-serif;
+            }
+            #inline-basket
+                > .card
+                > div:last-child
+                > a[data-variant="checkout-disabled"] {
+                background-color: #91abb7;
+                color: #fff;
+                font-family: "Panton", sans-serif;
+            }
+            ::selection {
+                background-color: rgba(193, 78, 80, 0.207843);
+            }
+            #navbar > .nav-right #navbar-cta-btn[data-variant="store"]:hover {
+                background-color: #42a8d3;
+            }
+            #category-selector a.selected {
+                background-color: #db4040;
+                color: #fff;
+            }
+            #category-selector a.selected:hover {
+                background-color: #e65151;
+                color: #fff !important;
+                text-decoration: none;
+            }
+
+            #category-selector a {
+                background-color: #eff0f0;
+                color: dimgray;
+                text-decoration: none;
+            }
+            #header > #inner-header > #header-title {
+                font-family: "Panton", sans-serif;
+            }
+            #header
+                > #inner-header
+                > #header-subtitle:not(.no-pad):not([data-variant="impact"]) {
+                font-weight: 200;
+                font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+                letter-spacing: 0.75px;
+            }
+
+            body {
+                background-color: #f5f6f5;
+            }
+            .basket-table thead {
+                font-family: "Panton", sans-serif;
+                background-color: #3b96be;
+            }
+            #checkout-redeem-coupon .btn,
+            #giftcard-balance .btn {
+                background-color: #3b96be;
+                color: #fff;
+            }
+            #checkout-basket > .row > div:last-child #proceed-to-checkout {
+                background-color: #3bbe54;
+                color: #fff;
+            }
+            .store-card > .card-body a {
+                background-color: #3b96be;
+                color: #fff;
+            }
+            #checkout-total > .card-body > div:first-child > div {
+                font-family: "Panton", sans-serif;
+                color: #4b4b4b !important;
+            }
+            .basket-table[data-variant="checkout"] td {
+                font-family: "Panton", sans-serif;
+                color: #4b4b4b !important;
+            }
+            .input-group > .custom-select:not(:last-child),
+            .input-group > .form-control:not(:last-child) {
+                background-color: #eff0f1;
+            }
+            #checkout-total > .card-body > div:last-child > p {
+                font-family: "Roboto", sans-serif;
+            }
+        </style>
+    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+        <section id="navbar" data-variant="store" class="navbar-home" style="padding-right: 525.406px">
+            <a href="basket" class="logo-holder no-drag">
+                <img src="logo.png" class="no-drag" alt="Lunar Client Logo">
+
+                <span class="home-title">Client Store</span>
+                <span class="home-direct">Click to visit home</span>
+            </a>
+            <div class="nav-right">
+                <div class="nav-icons">
+                    <div id="nav-icons-holder" class="no-drag">
+                        <div class="dropdown currency-selector">
+                            <i class="fas fa-dollar-sign" data-bs-toggle="dropdown" aria-hidden="true"></i>
+
+                            <ul class="dropdown-menu">
+                                <div class="dropdown-menu-inner">
+                                    <p>Click to select</p>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="AUD.png" alt="AUD flag">
+                                            AUD
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="BRL.png" alt="BRL flag">
+                                            BRL
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="CAD.png" alt="CAD flag">
+                                            CAD
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="DKK.png" alt="DKK flag">
+                                            DKK
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="EUR.png" alt="EUR flag">
+                                            EUR
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="HKD.png" alt="HKD flag">
+                                            HKD
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="JPY.png" alt="JPY flag">
+                                            JPY
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="NOK.png" alt="NOK flag">
+                                            NOK
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="NZD.png" alt="NZD flag">
+                                            NZD
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="PLN.png" alt="PLN flag">
+                                            PLN
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="GBP.png" alt="GBP flag">
+                                            GBP
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="SEK.png" alt="SEK flag">
+                                            SEK
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="CHF.png" alt="CHF flag">
+                                            CHF
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="USD.png" alt="USD flag">
+                                            USD
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="basket">
+                                            <img src="CNY.png" alt="CNY flag">
+                                            CNY
+                                        </a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                        <i class="fas fa-globe" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" aria-hidden="true" data-bs-original-title="Visit our website" aria-label="Visit our website"></i><span class="sr-only">Visit our website</span>
+
+                        <div class="theme-selector" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Theme toggle">
+                            <i class="far fa-moon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown basket-viewer">
+                    <a id="navbar-cta-btn" class="no-drag" href="basket" data-variant="store" data-bs-toggle="dropdown">
+                        <img src="1f2982c3e5d1408eb91ffcba41b55686">
+                        <div>
+                            <p>Click to view cart</p>
+                            <h3 id="ignneeded">test</h3>
+                        </div>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <div class="dropdown-menu-inner">
+                            <div class="basket-header">
+                                <div>
+                                    <div>
+                                        <img class="no-drag" src="1f2982c3e5d1408eb91ffcba41b55686(1)" alt="skimama&#39;s Minecraft Character">
+                                    </div>
+                                    <div>
+                                        <p>Shopping as</p>
+                                        <p>
+                                            https://skins.mcstats.com/face/1f2982c3e5d1408eb91ffcba41b55686
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="btn logout-btn" href="basket">
+                                    Logout
+                                </a>
+                            </div>
+
+                            <table class="table basket-table">
+                                <tbody>
+                                    <tr>
+                                        <td id="item">8bit Blackhole</td>
+                                        <td class="text-center">12.50 USD</td>
+                                        <td class="package-links">
+                                            <a class="remove-package" href="basket">
+                                                <i class="fas fa-times-circle" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8bit Star</td>
+                                        <td class="text-center">12.50 USD</td>
+                                        <td class="package-links">
+                                            <a class="remove-package" href="basket">
+                                                <i class="fas fa-times-circle" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="basket-footer">
+                                <a class="stretched-link" href="basket">
+                                    <div>Total: <span>75.00 USD</span></div>
+                                    <div>
+                                        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                        Checkout
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <a id="navbar-menu" class="hamburger hamburger--slider no-drag">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                    <span class="inner-text">Menu</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="navbar-overlay" data-variant="store">
+            <div id="mobile-overlay-extra">
+                <div id="mobile-basket">
+                    <div>
+                        <img class="no-drag" src="04563665863941a3963097ee9a719505" alt="skimama&#39;s Minecraft Character">
+                    </div>
+                    <div>
+                        <a class="btn" data-variant="open-basket" data-bs-toggle="modal" data-bs-target="#modal-basket">
+                            <i class="fas fa-shopping-basket" aria-hidden="true"></i>
+                            2 item(s) for 25.00 USD
+                        </a>
+                        <a class="btn" data-variant="logout" href="basket">
+                            <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+                            Logout
+                        </a>
+                        <a class="btn" data-variant="checkout" href="basket">
+                            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                            Checkout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-12 col-lg-2" data-variant="store">
+                    <a href="basket" style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.2),
+                                    rgba(0, 0, 0, 0.3)
+                                ),
+                                url(img/backgrounds/bandannas.png);
+                        ">
+                        <img src="bandannas.png">
+                        <h1>Bandannas</h1>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-2" data-variant="store">
+                    <a href="basket" style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.2),
+                                    rgba(0, 0, 0, 0.3)
+                                ),
+                                url(img/backgrounds/cloaks.png);
+                        ">
+                        <img src="cloaks.png">
+                        <h1>Cloaks</h1>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4" data-variant="store">
+                    <a href="basket" style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.2),
+                                    rgba(0, 0, 0, 0.3)
+                                ),
+                                url(img/backgrounds/lunarplus.png);
+                        ">
+                        <div class="ribbon">New!</div>
+                        <h1>Lunar<span class="plus">+</span></h1>
+                        <span>Subscription Service</span>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-2" data-variant="store">
+                    <a href="basket" style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.2),
+                                    rgba(0, 0, 0, 0.3)
+                                ),
+                                url(img/backgrounds/emotes.png);
+                        ">
+                        <img src="emotes.png">
+                        <h1>Emotes</h1>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-2" data-variant="store">
+                    <a href="basket" style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.2),
+                                    rgba(0, 0, 0, 0.3)
+                                ),
+                                url(img/backgrounds/masks.png);
+                        ">
+                        <img src="masks.png">
+                        <h1>Masks</h1>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-2" data-variant="store">
+                    <a href="basket" style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.2),
+                                    rgba(0, 0, 0, 0.3)
+                                ),
+                                url(img/backgrounds/hats.png);
+                        ">
+                        <img src="hats.png">
+                        <h1>Hats</h1>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-2" data-variant="store">
+                    <a href="basket" style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.2),
+                                    rgba(0, 0, 0, 0.3)
+                                ),
+                                url(img/backgrounds/bundles.png);
+                        ">
+                        <img src="bundles.png">
+                        <h1>Bundles</h1>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4" data-variant="store">
+                    <a href="basket" style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.2),
+                                    rgba(0, 0, 0, 0.3)
+                                ),
+                                url(img/backgrounds/partners.png);
+                        ">
+                        <h1>Partners</h1>
+                        <span>Our partner cosmetics</span>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-2" data-variant="store">
+                    <a href="basket" style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.2),
+                                    rgba(0, 0, 0, 0.3)
+                                ),
+                                url(img/backgrounds/bodywear.png);
+                        ">
+                        <img src="bodywear.png">
+                        <h1>Bodywear</h1>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-2" data-variant="store">
+                    <a href="basket" style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.2),
+                                    rgba(0, 0, 0, 0.3)
+                                ),
+                                url(img/backgrounds/wings.png);
+                        ">
+                        <img src="wings.png">
+                        <h1>Wings</h1>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div id="theme-settings" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content" style="border-radius: 0.5rem">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            <i class="fas fa-brush" aria-hidden="true"></i>
+                            Theme Settings
+                        </h5>
+                        <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-times-circle" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="modal-body"></div>
+                </div>
+            </div>
+        </div>
+        <section id="header" style="
+                background-image: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 0.65),
+                        rgba(0, 0, 0, 0.1)
+                    ),
+                    url(&);
+            ">
+            <div id="inner-header" data-variant="impact">
+                <h1 id="header-title">
+                    <span> Your Basket </span>
+                </h1>
+
+                <h5 id="header-subtitle">Confirm details of your gift</h5>
+            </div>
+        </section>
+
+        <section id="checkout-basket" class="container">
+            <div class="row">
+                <div class="col-12 col-md-7 col-xl-8">
+                    <div class="card aos-init aos-animate" data-aos="fade-up">
+                        <table class="table basket-table" data-variant="checkout">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td id="itemm">Valentines 2023 (Dreamcatcher)</td>
+
+                                    <td id="pricee">Free</td>
+
+                                    <td class="package-links"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 col-xl-4">
+                    <div id="checkout-total" class="store-card card aos-init aos-animate" data-aos="fade-left">
+                        <div class="card-body">
+                            <div>
+                                <h1>Total</h1>
+                                <div id="pricee2">Free USD</div>
+                            </div>
+                            <div>
+                                <img class="no-drag" src="1f2982c3e5d1408eb91ffcba41b55686" alt="skimama&#39;s Minecraft Face">
+                                <p>
+                                    You are claiming your Gift as
+                                    <span id="ign">test</span>. Please ensure this
+                                    username is correct so that we can accredit
+                                    the gifted items to the correct account.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="store-card card aos-init aos-animate" data-aos="fade-left">
+                        <div class="card-body">
+                            <h1>Claim Gift</h1>
+                            <p>
+                                You will be redirected to our payment partner to
+                                verify and claim the details of your gift.
+                            </p>
+                            <!-- <form method="get" action="http://localhost:3000/claimgift/checkout.html">
+                                <button type="submit" id="proceed-to-checkout" class="btn">
+                                    Redeem My Gift
+                                </button>
+                            </form> -->
+
+                            <form method="get" action="../checkout.html">
+                                <button type="submit" id="proceed-to-checkout" class="btn">
+                                    Redeem My Gift
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="crypto-redirect" class="store-card card aos-init aos-animate" data-aos="fade-left">
+                        <div class="card-body">
+                            <h1>Looking for Crypto?</h1>
+
+                            <p>
+                                We offer a fast and secure way to purchase store
+                                credit on any Moonsworth service using major
+                                cryptocurrencies.
+                            </p>
+
+                            <div class="image-holder">
+                                <img class="no-drag" src="cryptolist.png" alt="Supported Cryptocurrencies">
+                            </div>
+
+                            <a type="button" class="btn" href="https://crypto.moonsworth.com/?utm_source=lunarclient&amp;utm_medium=checkout&amp;utm_campaign=lead" target="_blank">
+                                Exchange Credit
+                            </a>
+                        </div>
+                    </div>
+                    <div class="store-card card aos-init aos-animate" data-aos="fade-left">
+                        <div class="card-body">
+                            <h1>Need Support?</h1>
+
+                            <p>
+                                Our support team is available around the clock
+                                to ensure that you get help with your issues as
+                                soon as possible.
+                            </p>
+
+                            <a type="button" class="btn" href="https://support.lunarclient.com/?utm_source=client-store&amp;utm_medium=sidebar&amp;utm_campaign=lead" target="_blank">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer-cta" class="container aos-init" data-aos="fade-up">
+            <div id="inner-footer-cta" data-variant="store">
+                <div id="cta-content">
+                    <img src="logo.png" data-variant="plus" class="no-drag" height="110px" width="120px" alt="Lunar Client Logo">
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                    <p>
+                        Gain access to <span>exclusive features</span>, support
+                        <span>development of the client</span> and get a
+                        <span>stylish icon</span>!<br>
+                        <span class="cta-hook">So what are you waiting for - Subscribe
+                            today!</span>
+                    </p>
+                </div>
+                <a id="cta-button" class="no-drag" href="basket" aria-label="Subscribe">
+                    <i class="fas fa-credit-card" aria-hidden="true"></i>
+                    Subscribe
+                </a>
+            </div>
+        </section>
+
+        <footer class="no-drag" data-cta-visible="true">
+            <div id="inner-footer" class="container">
+                <div id="footer-socials">
+                    <a href="https://www.lunarclient.com/twitter" aria-label="Twitter" target="_blank">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.lunarclient.com/discord" aria-label="Discord" target="_blank">
+                        <i class="fab fa-discord" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.lunarclient.com/tiktok" aria-label="TikTok" target="_blank">
+                        <i class="fab fa-tiktok" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.lunarclient.com/instagram" aria-label="Instagram" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.lunarclient.com/telegram" aria-label="Telegram" target="_blank">
+                        <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.lunarclient.com/youtube" aria-label="YouTube" target="_blank">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="footer-contents" class="row">
+                    <div id="footer-left" class="col-12 col-lg-3">
+                        <a href="basket" aria-label="Moonsworth, LLC">
+                            <img src="moonsworth.png" height="42px" width="42px" class="no-drag" alt="Moonsworth, LLC Logo">
+                            © 2022 Moonsworth, LLC
+                        </a>
+                    </div>
+
+                    <div id="footer-middle" class="col-12 col-lg-6">
+                        <a href="https://store.lunarclient.com/terms/checkout" aria-label="Terms" target="_blank">Terms</a>
+                        <a href="https://store.lunarclient.com/terms/privacy" aria-label="Privacy Policy" target="_blank">Privacy Policy</a>
+                        <a href="https://store.lunarclient.com/terms/impressum" aria-label="Impressum" target="_blank">Impressum</a>
+                        <a href="https://support.lunarclient.com/?utm_source=client-store&amp;utm_medium=footer&amp;utm_campaign=lead" aria-label="Support" target="_blank">Support</a>
+                    </div>
+
+                    <div id="footer-right" class="col-12 col-lg-3">
+                        Not affiliated with Mojang Studios
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div id="modal-display" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content" style="border-radius: 0.5rem"></div>
+            </div>
+        </div>
+
+        <div id="modal-basket" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content" style="border-radius: 0.5rem">
+                    <div class="basket-header">
+                        <div>
+                            <div>
+                                <img class="no-drag" src="04563665863941a3963097ee9a719505" alt="skimama&#39;s Minecraft Character">
+                            </div>
+                            <div>
+                                <p>Shopping as</p>
+                                <p>skimama</p>
+                            </div>
+                        </div>
+                        <a class="btn logout-btn" href="basket">
+                            Logout
+                        </a>
+                    </div>
+
+                    <table class="table basket-table">
+                        <tbody>
+                            <tr>
+                                <td>8bit Blackhole</td>
+                                <td class="text-center">12.50 USD</td>
+                                <td class="package-links">
+                                    <a class="remove-package" href="basket">
+                                        <i class="fas fa-times-circle" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8bit Star</td>
+                                <td class="text-center">12.50 USD</td>
+                                <td class="package-links">
+                                    <a class="remove-package" href="basket">
+                                        <i class="fas fa-times-circle" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="basket-footer">
+                        <a class="stretched-link" href="basket">
+                            <div>Total: <span>25.00 USD</span></div>
+                            <div>
+                                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                Checkout
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="waiting-overlay" style="display: none">
+            <i class="fa fa-cog fa-spin fa-3x" aria-hidden="true"></i>
+        </div>
+    
+
+</body></html>

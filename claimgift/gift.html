@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        <link rel="shortcut icon" href="https://store.lunarclient.com/templateassets/87e2d93e-bea0-4edf-952b-736a868527dc/favicon.ico">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Login | Lunar Client Store</title>
+
+        <meta
+            name="keywords"
+            content="lunar client, lunar client store, lunar client cosmetics, lunar client cloaks"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta
+            name="description"
+            content="Explore your favorite Minecraft Cosmetics on the Lunar Client Store, including Cloaks, Wings, Emotes, and much more! Shop now and explore the range of Lunar Client Cosmetics on offer."
+        />
+
+        <meta property="og:site_name" content="Lunar Client Store" />
+        <meta
+            property="og:title"
+            content="Shop Lunar Client Cosmetics &amp; Emotes | Lunar Client Store"
+        />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:image"
+            content="https://store.lunarclient.com/templateassets/0005b1e9-2541-4d7f-9af0-c425e5a752e9/cards/home.webp"
+        />
+        <meta property="og:image:width" content="876" />
+        <meta property="og:image:height" content="438" />
+        <meta
+            property="og:description"
+            content="Explore your favorite Minecraft Cosmetics on the Lunar Client Store, including Cloaks, Wings, Emotes, and much more! Shop now and explore the range of Lunar Client Cosmetics on offer."
+        />
+
+        <meta name="twitter:domain" content="store.lunarclient.com" />
+        <meta name="twitter:site" content="@LunarClient" />
+        <meta name="twitter:creator" content="@LunarClient" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Shop Lunar Client Cosmetics &amp; Emotes | Lunar Client Store"
+        />
+        <meta
+            name="twitter:image"
+            content="https://storeassets.lunarclientcdn.com/cards/home.webp"
+        />
+        <meta
+            name="twitter:description"
+            content="Explore your favorite Minecraft Cosmetics on the Lunar Client Store, including Cloaks, Wings, Emotes, and much more! Shop now and explore the range of Lunar Client Cosmetics on offer."
+        />
+
+        <script src="script.js"></script>
+        <script>
+            window.onload = function () {
+                const queryString = window.location.search;
+                console.log(queryString);
+
+                const urlParams = new URLSearchParams(queryString);
+                const gift = urlParams.get("gift");
+                const price = urlParams.get("price");
+                const creator = urlParams.get("ref");
+
+                document.cookie = "gift=" + gift;
+                document.cookie = "price=" + price;
+                document.cookie = "ref=" + creator;
+
+                location.href = "../claimgift/";
+            };
+        </script>
+    </head>
+    <body></body>
+
+</html>
